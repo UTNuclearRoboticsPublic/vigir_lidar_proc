@@ -42,7 +42,7 @@ public:
   {
     ros::NodeHandle nh_;
 
-    scan_sub_ = nh_.subscribe("scan", 10, &LaserscanToPointcloud::scanCallback, this);
+    scan_sub_ = nh_.subscribe("scan_filtered", 10, &LaserscanToPointcloud::scanCallback, this);
     point_cloud2_pub_ = nh_.advertise<sensor_msgs::PointCloud2>("scan_cloud",10,false);
 
     ros::NodeHandle pnh_("~");
