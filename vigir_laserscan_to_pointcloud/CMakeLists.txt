@@ -30,6 +30,9 @@ add_executable(laserscan_to_pointcloud_node src/laserscan_to_pointcloud_node.cpp
 target_link_libraries(laserscan_to_pointcloud_node ${catkin_LIBRARIES})
 add_dependencies(laserscan_to_pointcloud_node ${catkin_EXPORTED_TARGETS})
 
+add_executable(laserscan_to_pointcloud_node_sim src/laserscan_to_pointcloud_node_sim.cpp)
+target_link_libraries(laserscan_to_pointcloud_node_sim ${catkin_LIBRARIES})
+add_dependencies(laserscan_to_pointcloud_node_sim ${catkin_EXPORTED_TARGETS})
 
 #install execs
 install(TARGETS
