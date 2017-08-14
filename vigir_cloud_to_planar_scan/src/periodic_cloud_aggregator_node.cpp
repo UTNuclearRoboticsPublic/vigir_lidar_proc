@@ -56,8 +56,8 @@ public:
     ros::NodeHandle pnh_("~");
 
 
-    pnh_.param("target_frame", p_target_frame_, std::string("base_link"));
-    pnh_.param("publish_frequency_hz", p_publish_frequency_, 0.5);
+    pnh_.param("target_frame", p_target_frame_, std::string("odom"));
+    pnh_.param("publish_frequency_hz", p_publish_frequency_, 25.0);
 
     tfl_.reset(new tf::TransformListener());
     wait_duration_ = ros::Duration(0.5);
